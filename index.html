@@ -4,5 +4,82 @@
 <body>
     <script>
         console.log("Hello World");
+
+        function randomNumberInRange (min, max) {
+            return Math.floor(Math.random() * (max - min) + min)
+        }
+
+        function computerPlay () {
+            let number = randomNumberInRange (1, 4);
+
+            if (number === 1){
+                return "rock";
+            }
+
+            else if (number === 2){
+                return "paper";
+            }
+
+            else {
+                return "scissors"
+            }
+        }
+
+        function playerPlay () {
+            let playerInput = prompt("Rock, Paper, Scissors?");
+            return playerInput
+        }
+
+        function singleRound () {
+            let playerSelection = playerPlay();
+            let computerSelection = computerPlay();
+
+            console.log(playerSelection, computerSelection);
+
+            if (playerSelection.toLowerCase() === "rock" && computerSelection === "paper"){
+                return "You Lose! Paper Beats Rock"
+            }
+
+            else if (playerSelection.toLowerCase() === "paper" && computerSelection === "rock"){
+                return "You Win! Paper Beats Rock"
+            }
+
+            else if (playerSelection.toLowerCase() === "paper" && computerSelection === "scissors"){
+                return "You Lose! Scissors Beats Paper"
+            }
+
+            else if (playerSelection.toLowerCase() === "scissors" && computerSelection === "paper"){
+                return "You Win! Scissors Beats Paper"
+            }
+
+            else if (playerSelection.toLowerCase() === "paper" && computerSelection === "paper"){
+                return "It's a draw!"
+            }
+
+            else if (playerSelection.toLowerCase() === "rock" && computerSelection === "scissors"){
+                return "You Win! Rock Beats Scissors"
+            }
+
+            else if (playerSelection.toLowerCase() === "scissors" && computerSelection === "rock"){
+                return "You Lose! Rock Beats Scissors"
+            }
+
+            else if (playerSelection.toLowerCase() === "paper" && computerSelection === "scissors"){
+                return "You Lose! Scissors Beats Paper"
+            }
+
+            else if (playerSelection.toLowerCase() === "scissors" && computerSelection === "paper"){
+                return "You Win! Scissors Beats Paper"
+            }
+
+            else if (playerSelection.toLowerCase() === "scissors" && computerSelection === "scissors"){
+                return "It's a draw"
+            }
+
+            else if (playerSelection.toLowerCase() === "rock" && computerSelection === "rock"){
+                return "It's a draw"
+            }
+        }
+
     </script>
 </body>
