@@ -10,22 +10,24 @@
     display: flex;
     margin: auto;
     justify-content: space-evenly;
+    padding-top: 3rem;
 }
 
 .playerButton {
-    background: none;
+    background-color: rgb(206, 206, 206);
     border: none;
+    border-radius: 0.7rem;
     font-size: 1.2rem;
     font-family: "PT Sans", sans-serif;
     font-weight: bold;
-    padding-top: 3rem;
-    transition: all 0.3s;
+    padding: 0.7rem;
+    transition: all 0.2s;
 }
 
 .playerButton:hover {
-    text-decoration: underline;
     transform: scale(1.1);
     color: rgb(119, 115, 115);
+    box-shadow: 0 0 0.2rem 0 rgb(155, 155, 155);
 }
 
 #rounds {
