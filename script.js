@@ -19,7 +19,7 @@ console.log("Hello World");
         function computerPlay () {
             let number = randomNumberInRange (1, 4);
 
-            if (number === 1){ // If the number generated is 2, return the string of rock
+            if (number === 1){ // If the number generated is 1, return the string of rock
                 return "rock";
             }
 
