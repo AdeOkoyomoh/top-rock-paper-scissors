@@ -1,3 +1,7 @@
+body {
+    background-color:rgb(255, 255, 255);
+}
+
 #main-heading {
     text-align: center;
     font-family: "PT Sans", sans-serif;
@@ -22,6 +26,7 @@
     font-weight: bold;
     padding: 0.7rem;
     transition: all 0.2s;
+    color: rgb(72, 71, 71);
 }
 
 .playerButton:hover {
