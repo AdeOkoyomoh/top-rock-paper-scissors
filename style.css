@@ -1,0 +1,50 @@
+#main-heading {
+    text-align: center;
+    font-family: "PT Sans", sans-serif;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+}
+
+#playerInputs {
+    width: 50%;
+    display: flex;
+    margin: auto;
+    justify-content: space-evenly;
+}
+
+.playerButton {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    font-family: "PT Sans", sans-serif;
+    font-weight: bold;
+    padding-top: 3rem;
+    transition: all 0.3s;
+}
+
+.playerButton:hover {
+    text-decoration: underline;
+    transform: scale(1.1);
+    color: rgb(119, 115, 115);
+}
+
+#rounds {
+    text-align: center;
+    font-family: "PT Sans", sans-serif;
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+
+#points {
+    text-align: center;
+    font-family: "PT Sans", sans-serif;
+}
+
+#announcer {
+    text-align: center;
+    font-family: "PT Sans", sans-serif;
+}
+
+#dema {
+    width: 70%;
+}

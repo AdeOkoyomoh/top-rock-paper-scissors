@@ -1,113 +1,38 @@
 <head>
     <title>Rock, Paper, Scissors</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Work+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script>
-        console.log("Hello World");
+    <script src="script.js" defer></script>
+    <header>
+        <h1 id="main-heading">Rock, Paper, Scissors!</h1>
+        <hr id="dema">
+    </header>
+    <main>
+        <div id="scoreboard">
+            <h2 id="rounds">
 
-        function randomNumberInRange (min, max) {
-            return Math.floor(Math.random() * (max - min) + min)
-        }
+            </h2>
+            <p id="points">
+                
+            </p>
+            <p id="announcer">
 
-        function computerPlay () {
-            let number = randomNumberInRange (1, 4);
+            </p>
+        </div>
+        <div id="playerInputs">
+            <button id="rockButton" class="playerButton">ROCK</button>
+            <button id="paperButton" class="playerButton">PAPER</button>
+            <button id="scissorsButton" class="playerButton">SCISSORS</button>
+        </div>
+    </main>
+    <footer>
 
-            if (number === 1){
-                return "rock";
-            }
-
-            else if (number === 2){
-                return "paper";
-            }
-
-            else {
-                return "scissors"
-            }
-        }
-
-        function playerPlay () {
-            let playerInput = prompt("Rock, Paper, Scissors?");
-            return playerInput
-        }
-
-        function singleRound () {
-            let playerSelection = playerPlay();
-            let computerSelection = computerPlay();
-            let result;
-
-            console.log(playerSelection, computerSelection);
-
-            if (playerSelection.toLowerCase() === "rock" && computerSelection === "paper"){
-                result = "You Lose! Paper Beats Rock"
-            }
-
-            else if (playerSelection.toLowerCase() === "paper" && computerSelection === "rock"){
-                result = "You Win! Paper Beats Rock"
-            }
-
-            else if (playerSelection.toLowerCase() === "paper" && computerSelection === "scissors"){
-                result = "You Lose! Scissors Beats Paper"
-            }
-
-            else if (playerSelection.toLowerCase() === "scissors" && computerSelection === "paper"){
-                result = "You Win! Scissors Beats Paper"
-            }
-
-            else if (playerSelection.toLowerCase() === "paper" && computerSelection === "paper"){
-                result = "It's a draw!"
-            }
-
-            else if (playerSelection.toLowerCase() === "rock" && computerSelection === "scissors"){
-                result = "You Win! Rock Beats Scissors"
-            }
-
-            else if (playerSelection.toLowerCase() === "scissors" && computerSelection === "rock"){
-                result = "You Lose! Rock Beats Scissors"
-            }
-
-            else if (playerSelection.toLowerCase() === "paper" && computerSelection === "scissors"){
-                result = "You Lose! Scissors Beats Paper"
-            }
-
-            else if (playerSelection.toLowerCase() === "scissors" && computerSelection === "paper"){
-                result = "You Win! Scissors Beats Paper"
-            }
-
-            else if (playerSelection.toLowerCase() === "scissors" && computerSelection === "scissors"){
-                result = "It's a draw"
-            }
-
-            else if (playerSelection.toLowerCase() === "rock" && computerSelection === "rock"){
-                result = "It's a draw"
-            }
-
-            console.log(result);
-
-            return result;
-        }
-
-        function game(){
-
-            let points = 0;
-
-            for (let round = 1; round < 6; round++){
-                if (singleRound().includes("You Win")){
-                    points++
-                }
-            }
-
-            let winner;
-
-            if (points >= 3){
-                winner = "You win!";
-            }
-
-            else {
-                winner = "You lost!"
-            }
-
-            console.log(winner, points);
-        }
-
-    </script>
+    </footer>
 </body>
